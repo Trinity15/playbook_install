@@ -1,0 +1,6 @@
+---
+# vars file for docker_swarm
+dvars:
+   repo: https://download.docker.com/linux/centos/docker-ce.repo
+   pkg_name: docker-ce
+   service_name: docker

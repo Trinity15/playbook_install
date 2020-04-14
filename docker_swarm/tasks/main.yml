@@ -1,0 +1,12 @@
+---
+# tasks file for docker_swarm
+- name: downloading the docker repo
+  get_url:
+    url: "{{ dvars.repo }}"
+    dest: /etc/yum.repos.d/docker.repo
+- name: Installing docker package
+  package:
+    name: "{{ dvars.pkg_name }}"
+    state: latest
+  notify: doc_service
+                                                      
